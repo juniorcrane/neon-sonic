@@ -1,0 +1,24 @@
+[remap]
+
+importer="wav"
+type="AudioStreamWAV"
+uid="uid://dqe8dxg0n1i6k"
+path="res://.godot/imported/Skidding.wav-4f836bcee7397bd1d3f8b084d8cb4f6e.sample"
+
+[deps]
+
+source_file="res://Assets/Sound Effects/Skidding.wav"
+dest_files=["res://.godot/imported/Skidding.wav-4f836bcee7397bd1d3f8b084d8cb4f6e.sample"]
+
+[params]
+
+force/8_bit=false
+force/mono=false
+force/max_rate=false
+force/max_rate_hz=44100
+edit/trim=false
+edit/normalize=false
+edit/loop_mode=0
+edit/loop_begin=0
+edit/loop_end=-1
+compress/mode=2

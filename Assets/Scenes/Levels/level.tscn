@@ -1,0 +1,250 @@
+[gd_scene format=3 uid="uid://ddps25mogjoba"]
+
+[ext_resource type="Texture2D" uid="uid://cbw2c438jcvu0" path="res://Assets/Sprites/Background/Green Hill Zone/6.png" id="1_o1qh6"]
+[ext_resource type="Script" uid="uid://cf1410t0sgtk6" path="res://Assets/Scenes/Levels/Background.cs" id="1_oxobm"]
+[ext_resource type="PackedScene" uid="uid://bsln45ap6fjxh" path="res://Assets/Characters/Player/player.tscn" id="1_ysexv"]
+[ext_resource type="Texture2D" uid="uid://dellmu4dpfc73" path="res://Assets/Sprites/Background/Green Hill Zone/5.png" id="2_ysexv"]
+[ext_resource type="Texture2D" uid="uid://dmdgny5bvnu25" path="res://Assets/Sprites/Background/Green Hill Zone/4.png" id="3_oxobm"]
+[ext_resource type="Texture2D" uid="uid://tevivfdekscm" path="res://Assets/Sprites/Background/Green Hill Zone/3.png" id="4_kydpm"]
+[ext_resource type="Texture2D" uid="uid://cepnon1yq42v5" path="res://Assets/Sprites/Background/Green Hill Zone/2.png" id="5_7ltjh"]
+[ext_resource type="Texture2D" uid="uid://ch3iqlwr0sp4k" path="res://Assets/Sprites/Background/Green Hill Zone/1.png" id="6_havkg"]
+[ext_resource type="Script" uid="uid://xvwog2imy2dh" path="res://Assets/Scenes/Levels/Camera3d.cs" id="9_oxobm"]
+[ext_resource type="AudioStream" uid="uid://bwmmlxnrmryhx" path="res://Assets/Music/Glass Ocean.ogg" id="10_kydpm"]
+
+[sub_resource type="ViewportTexture" id="ViewportTexture_kydpm"]
+viewport_path = NodePath("SubViewport")
+
+[sub_resource type="PhysicsMaterial" id="PhysicsMaterial_o1qh6"]
+friction = 0.1
+absorbent = true
+
+[sub_resource type="BoxMesh" id="BoxMesh_15q6v"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_jjb4j"]
+
+[node name="Level" type="Node2D" unique_id=15052903]
+
+[node name="Background" type="Sprite2D" parent="." unique_id=1816405506]
+texture_filter = 1
+position = Vector2(-1, -20)
+scale = Vector2(0.675, 0.675)
+texture = SubResource("ViewportTexture_kydpm")
+script = ExtResource("1_oxobm")
+
+[node name="StaticBody2D" type="StaticBody2D" parent="." unique_id=973777753]
+position = Vector2(60.000004, 281)
+scale = Vector2(3.78, 8.89)
+physics_material_override = SubResource("PhysicsMaterial_o1qh6")
+
+[node name="MeshInstance2D" type="MeshInstance2D" parent="StaticBody2D" unique_id=1457162137]
+scale = Vector2(62.63, 62.63)
+mesh = SubResource("BoxMesh_15q6v")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="StaticBody2D" unique_id=1376109139]
+scale = Vector2(3.1372652, 3.1372652)
+shape = SubResource("RectangleShape2D_jjb4j")
+
+[node name="StaticBody2D2" type="StaticBody2D" parent="." unique_id=1924316969]
+position = Vector2(153, 81)
+rotation = 0.7120943
+scale = Vector2(1.045, 2.425)
+physics_material_override = SubResource("PhysicsMaterial_o1qh6")
+
+[node name="MeshInstance2D" type="MeshInstance2D" parent="StaticBody2D2" unique_id=1557585998]
+scale = Vector2(62.63, 62.63)
+mesh = SubResource("BoxMesh_15q6v")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="StaticBody2D2" unique_id=172417439]
+scale = Vector2(3.1372652, 3.1372652)
+shape = SubResource("RectangleShape2D_jjb4j")
+
+[node name="StaticBody2D3" type="StaticBody2D" parent="." unique_id=981238611]
+position = Vector2(347.00003, 327)
+scale = Vector2(5.9, 8.995)
+physics_material_override = SubResource("PhysicsMaterial_o1qh6")
+
+[node name="MeshInstance2D" type="MeshInstance2D" parent="StaticBody2D3" unique_id=1850103602]
+scale = Vector2(62.63, 62.63)
+mesh = SubResource("BoxMesh_15q6v")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="StaticBody2D3" unique_id=236905413]
+scale = Vector2(3.1372652, 3.1372652)
+shape = SubResource("RectangleShape2D_jjb4j")
+
+[node name="StaticBody2D8" type="StaticBody2D" parent="." unique_id=1759077238]
+position = Vector2(952, 290)
+scale = Vector2(1.225, 8.995)
+physics_material_override = SubResource("PhysicsMaterial_o1qh6")
+
+[node name="MeshInstance2D" type="MeshInstance2D" parent="StaticBody2D8" unique_id=1729553848]
+scale = Vector2(62.63, 62.63)
+mesh = SubResource("BoxMesh_15q6v")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="StaticBody2D8" unique_id=1958783722]
+scale = Vector2(3.1372652, 3.1372652)
+shape = SubResource("RectangleShape2D_jjb4j")
+
+[node name="StaticBody2D9" type="StaticBody2D" parent="." unique_id=1440782027]
+position = Vector2(1329, 290)
+scale = Vector2(1.225, 8.995)
+physics_material_override = SubResource("PhysicsMaterial_o1qh6")
+
+[node name="MeshInstance2D" type="MeshInstance2D" parent="StaticBody2D9" unique_id=722793219]
+scale = Vector2(62.63, 62.63)
+mesh = SubResource("BoxMesh_15q6v")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="StaticBody2D9" unique_id=1400746253]
+scale = Vector2(3.1372652, 3.1372652)
+shape = SubResource("RectangleShape2D_jjb4j")
+
+[node name="StaticBody2D10" type="StaticBody2D" parent="." unique_id=220853790]
+position = Vector2(2559, -109)
+scale = Vector2(4.065, 22.85)
+physics_material_override = SubResource("PhysicsMaterial_o1qh6")
+
+[node name="MeshInstance2D" type="MeshInstance2D" parent="StaticBody2D10" unique_id=333894383]
+scale = Vector2(62.63, 62.63)
+mesh = SubResource("BoxMesh_15q6v")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="StaticBody2D10" unique_id=668476495]
+scale = Vector2(3.1372652, 3.1372652)
+shape = SubResource("RectangleShape2D_jjb4j")
+
+[node name="StaticBody2D4" type="StaticBody2D" parent="." unique_id=60991319]
+position = Vector2(1033, -2)
+scale = Vector2(3.78, 1)
+physics_material_override = SubResource("PhysicsMaterial_o1qh6")
+
+[node name="MeshInstance2D" type="MeshInstance2D" parent="StaticBody2D4" unique_id=778702917]
+scale = Vector2(62.63, 62.63)
+mesh = SubResource("BoxMesh_15q6v")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="StaticBody2D4" unique_id=1673162789]
+scale = Vector2(3.1372652, 3.1372652)
+shape = SubResource("RectangleShape2D_jjb4j")
+
+[node name="StaticBody2D5" type="StaticBody2D" parent="." unique_id=561119933]
+position = Vector2(1250, 18)
+scale = Vector2(3.78, 1)
+physics_material_override = SubResource("PhysicsMaterial_o1qh6")
+
+[node name="MeshInstance2D" type="MeshInstance2D" parent="StaticBody2D5" unique_id=1862374944]
+scale = Vector2(62.63, 62.63)
+mesh = SubResource("BoxMesh_15q6v")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="StaticBody2D5" unique_id=1496423369]
+scale = Vector2(3.1372652, 3.1372652)
+shape = SubResource("RectangleShape2D_jjb4j")
+
+[node name="StaticBody2D6" type="StaticBody2D" parent="." unique_id=1742190928]
+position = Vector2(1684, -313)
+scale = Vector2(1.08, 1)
+physics_material_override = SubResource("PhysicsMaterial_o1qh6")
+
+[node name="MeshInstance2D" type="MeshInstance2D" parent="StaticBody2D6" unique_id=1066300760]
+scale = Vector2(62.63, 62.63)
+mesh = SubResource("BoxMesh_15q6v")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="StaticBody2D6" unique_id=13123515]
+scale = Vector2(3.1372652, 3.1372652)
+shape = SubResource("RectangleShape2D_jjb4j")
+
+[node name="StaticBody2D7" type="StaticBody2D" parent="." unique_id=210898916]
+position = Vector2(2248, 246)
+scale = Vector2(6.555, 11.48)
+physics_material_override = SubResource("PhysicsMaterial_o1qh6")
+
+[node name="MeshInstance2D" type="MeshInstance2D" parent="StaticBody2D7" unique_id=1351368483]
+scale = Vector2(62.63, 62.63)
+mesh = SubResource("BoxMesh_15q6v")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="StaticBody2D7" unique_id=1745012441]
+scale = Vector2(3.1372652, 3.1372652)
+shape = SubResource("RectangleShape2D_jjb4j")
+
+[node name="Player" parent="." unique_id=834376588 instance=ExtResource("1_ysexv")]
+
+[node name="Sprite3D" type="Sprite3D" parent="." unique_id=641607941]
+transform = Transform3D(0.39, 0, 0, 0, 0.39, 0, 0, 0, 0.39, 0, -0.392, 5.383)
+texture_filter = 0
+render_priority = 127
+texture = ExtResource("6_havkg")
+
+[node name="Sprite3D7" type="Sprite3D" parent="Sprite3D" unique_id=791520588]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 38.312824, 0, 0)
+texture_filter = 0
+texture = ExtResource("6_havkg")
+
+[node name="Sprite3D8" type="Sprite3D" parent="Sprite3D" unique_id=2037455774]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -38.110256, 0, 0)
+texture_filter = 0
+texture = ExtResource("6_havkg")
+
+[node name="Sprite3D2" type="Sprite3D" parent="." unique_id=344023473]
+transform = Transform3D(1.025, 0, 0, 0, 1.025, 0, 0, 0, 1.025, 0, -0.08071315, 5.0474825)
+texture_filter = 0
+render_priority = 101
+texture = ExtResource("5_7ltjh")
+
+[node name="Sprite3D7" type="Sprite3D" parent="Sprite3D2" unique_id=163314074]
+transform = Transform3D(-0.99999994, 8.742277e-08, 0, -8.742277e-08, -0.99999994, 0, 0, 0, 0.99999994, 0, -0.3938182, 0)
+texture_filter = 0
+texture = ExtResource("5_7ltjh")
+
+[node name="Sprite3D3" type="Sprite3D" parent="." unique_id=2143918429]
+transform = Transform3D(1.37, 0, 0, 0, 1.37, 0, 0, 0, 1.37, 0, 0.5234258, 4.408)
+texture_filter = 0
+render_priority = 96
+texture = ExtResource("4_kydpm")
+
+[node name="Sprite3D7" type="Sprite3D" parent="Sprite3D3" unique_id=801882464]
+transform = Transform3D(-1, 8.742277e-08, 0, -8.742277e-08, -1, 0, 0, 0, 1, 0, -0.47304457, 0)
+texture_filter = 0
+texture = ExtResource("4_kydpm")
+
+[node name="Sprite3D4" type="Sprite3D" parent="." unique_id=1121413839]
+transform = Transform3D(7.35, 0, 0, 0, 7.35, 0, 0, 0, 7.35, 0, 1.0003924, 3.36)
+texture_filter = 0
+render_priority = 81
+texture = ExtResource("3_oxobm")
+
+[node name="Sprite3D7" type="Sprite3D" parent="Sprite3D4" unique_id=715580089]
+transform = Transform3D(0.99999994, 0, 0, 0, 0.99999994, 0, 0, 0, 0.99999994, 0, -0.15624444, 0)
+texture_filter = 0
+texture = ExtResource("3_oxobm")
+
+[node name="Sprite3D5" type="Sprite3D" parent="." unique_id=856785522]
+transform = Transform3D(4.535, 0, 0, 0, 4.535, 0, 0, 0, 4.535, 0, 1.6773924, 2.9345179)
+texture_filter = 0
+render_priority = 77
+texture = ExtResource("2_ysexv")
+
+[node name="Sprite3D7" type="Sprite3D" parent="Sprite3D5" unique_id=651833250]
+transform = Transform3D(0.99999994, 0, 0, 0, 0.99999994, 0, 0, 0, 0.99999994, 0, -0.14130326, 0)
+texture_filter = 0
+texture = ExtResource("2_ysexv")
+
+[node name="Sprite3D6" type="Sprite3D" parent="." unique_id=536009211]
+transform = Transform3D(4.535, 0, 0, 0, 4.535, 0, 0, 0, 4.535, 0, 2.6777964, 2.7176704)
+texture_filter = 0
+render_priority = 63
+texture = ExtResource("1_o1qh6")
+
+[node name="Sprite3D7" type="Sprite3D" parent="Sprite3D6" unique_id=387086806]
+transform = Transform3D(0.99999994, 0, 0, 0, 0.99999994, 0, 0, 0, 0.99999994, 0, -0.2984412, 0)
+texture_filter = 0
+texture = ExtResource("1_o1qh6")
+
+[node name="SubViewport" type="SubViewport" parent="." unique_id=1164202184]
+size = Vector2i(725, 512)
+
+[node name="Camera3D" type="Camera3D" parent="SubViewport" unique_id=1364350278]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.43217754, 7.796872)
+doppler_tracking = 1
+fov = 46.1
+near = 0.001
+script = ExtResource("9_oxobm")
+
+[node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="." unique_id=1641754644]
+stream = ExtResource("10_kydpm")
+autoplay = true

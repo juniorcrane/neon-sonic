@@ -1,0 +1,19 @@
+[remap]
+
+importer="oggvorbisstr"
+type="AudioStreamOggVorbis"
+uid="uid://bwmmlxnrmryhx"
+path="res://.godot/imported/Glass Ocean.ogg-1af6055f420a1b971a39b09a6dcfbb38.oggvorbisstr"
+
+[deps]
+
+source_file="res://Assets/Music/Glass Ocean.ogg"
+dest_files=["res://.godot/imported/Glass Ocean.ogg-1af6055f420a1b971a39b09a6dcfbb38.oggvorbisstr"]
+
+[params]
+
+loop=true
+loop_offset=0.0
+bpm=0.0
+beat_count=0
+bar_beats=4

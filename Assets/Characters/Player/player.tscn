@@ -1,0 +1,138 @@
+[gd_scene format=3 uid="uid://bsln45ap6fjxh"]
+
+[ext_resource type="Script" uid="uid://um460t3o1ckv" path="res://Assets/Characters/Player/Player.cs" id="1_cjdyb"]
+[ext_resource type="SpriteFrames" uid="uid://vct7p4xia4yd" path="res://Assets/Characters/Player/Sonic.tres" id="2_nt5of"]
+[ext_resource type="AudioStream" uid="uid://cth3a0thond6y" path="res://Assets/Sound Effects/Jump.wav" id="4_vnqoj"]
+[ext_resource type="Script" uid="uid://b6dywwnmric1n" path="res://Assets/Characters/Player/Camera2d.cs" id="4_wvsk4"]
+[ext_resource type="Texture2D" uid="uid://1son481ef2m7" path="res://Assets/Sprites/UI.png" id="5_5eggl"]
+[ext_resource type="Script" uid="uid://bc8ab3ilbxyic" path="res://Assets/Characters/Player/Jump.cs" id="5_26fvs"]
+[ext_resource type="Texture2D" uid="uid://cviddjrslbw6n" path="res://Assets/Sprites/sonics.png" id="6_q0r8c"]
+[ext_resource type="AudioStream" uid="uid://dqe8dxg0n1i6k" path="res://Assets/Sound Effects/Skidding.wav" id="6_xjtj3"]
+[ext_resource type="Script" uid="uid://v35xrh5tdkft" path="res://Assets/Characters/Player/Character.cs" id="7_5xk7i"]
+[ext_resource type="Texture2D" uid="uid://cns47vi2la28o" path="res://Assets/Sprites/Cards/pixil-frame-0(111).png" id="7_detmv"]
+[ext_resource type="Script" uid="uid://r4j1ol0o3om5" path="res://Assets/Characters/Player/Skid.cs" id="7_u1g48"]
+[ext_resource type="Texture2D" uid="uid://bicbx7fr3ytge" path="res://Assets/Sprites/Cards/pixil-frame-0(110).png" id="8_5xk7i"]
+[ext_resource type="Script" uid="uid://ijvx5iot8mqr" path="res://Assets/Characters/Player/Card3.cs" id="10_yay70"]
+[ext_resource type="Script" uid="uid://sxre2ah2dt1n" path="res://Assets/Characters/Player/Card2.cs" id="11_wyg8a"]
+[ext_resource type="Script" uid="uid://looomc3nt6sg" path="res://Assets/Characters/Player/Card1.cs" id="12_a7576"]
+[ext_resource type="AudioStream" uid="uid://3wg76jlcpd4y" path="res://Assets/Sound Effects/fall.wav" id="17_xjtj3"]
+[ext_resource type="AudioStream" uid="uid://csv38kebopvuy" path="res://Assets/Sound Effects/swap.wav" id="18_u1g48"]
+[ext_resource type="Script" uid="uid://p4lewe25lcws" path="res://Assets/Characters/Player/Sonic.cs" id="48_cjdyb"]
+
+[sub_resource type="PhysicsMaterial" id="PhysicsMaterial_cjdyb"]
+friction = 0.0
+absorbent = true
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_vvntf"]
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_15q6v"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("7_detmv")
+}],
+"loop": 1,
+"name": &"Elevate",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("8_5xk7i")
+}],
+"loop": 1,
+"name": &"default",
+"speed": 5.0
+}]
+
+[node name="Player" type="RigidBody2D" unique_id=834376588]
+position = Vector2(1, 0)
+mass = 40.0
+physics_material_override = SubResource("PhysicsMaterial_cjdyb")
+gravity_scale = 0.3
+script = ExtResource("1_cjdyb")
+
+[node name="Collision" type="CollisionShape2D" parent="." unique_id=1561252005]
+position = Vector2(0, -19.615)
+scale = Vector2(1, 1.955)
+shape = SubResource("RectangleShape2D_vvntf")
+
+[node name="Sonic" type="AnimatedSprite2D" parent="." unique_id=1739888103]
+texture_filter = 1
+sprite_frames = ExtResource("2_nt5of")
+animation = &"Jump"
+autoplay = "Idle"
+frame = 3
+frame_progress = 0.99030685
+offset = Vector2(0, -22.53)
+script = ExtResource("48_cjdyb")
+
+[node name="Jump" type="AudioStreamPlayer2D" parent="Sonic" unique_id=964370435]
+stream = ExtResource("4_vnqoj")
+script = ExtResource("5_26fvs")
+
+[node name="Skid" type="AudioStreamPlayer2D" parent="Sonic" unique_id=1399349699]
+stream = ExtResource("6_xjtj3")
+script = ExtResource("7_u1g48")
+
+[node name="Camera2D" type="Camera2D" parent="." unique_id=658869240]
+position = Vector2(0, -19.585)
+scale = Vector2(0.9890515, -2.1187446)
+zoom = Vector2(0.665, 0.665)
+script = ExtResource("4_wvsk4")
+
+[node name="UI" type="Sprite2D" parent="Camera2D" unique_id=934059707]
+texture_filter = 1
+position = Vector2(0, 0.19587135)
+scale = Vector2(1.5216599, -0.71032625)
+texture = ExtResource("5_5eggl")
+
+[node name="Character" type="Sprite2D" parent="Camera2D" unique_id=409648295]
+texture_filter = 1
+position = Vector2(-77.852, -57.857)
+scale = Vector2(1.5216599, -0.71032625)
+texture = ExtResource("6_q0r8c")
+script = ExtResource("7_5xk7i")
+
+[node name="Card3" type="AnimatedSprite2D" parent="Camera2D" unique_id=199993155]
+texture_filter = 1
+position = Vector2(201.20284, -50.040237)
+scale = Vector2(1.6834308, -0.78584254)
+sprite_frames = SubResource("SpriteFrames_15q6v")
+animation = &"Elevate"
+script = ExtResource("10_yay70")
+
+[node name="Card2" type="AnimatedSprite2D" parent="Camera2D" unique_id=1191503168]
+z_index = 1
+texture_filter = 1
+position = Vector2(156.14706, -50.246723)
+scale = Vector2(1.6834309, -0.7858426)
+sprite_frames = SubResource("SpriteFrames_15q6v")
+animation = &"Elevate"
+script = ExtResource("11_wyg8a")
+
+[node name="Card1" type="AnimatedSprite2D" parent="Camera2D" unique_id=620604831]
+z_index = 2
+texture_filter = 1
+position = Vector2(109.637856, -50.246723)
+scale = Vector2(1.6834309, -0.7858426)
+sprite_frames = SubResource("SpriteFrames_15q6v")
+script = ExtResource("12_a7576")
+
+[node name="DemonCount" type="RichTextLabel" parent="Camera2D" unique_id=888405427]
+offset_left = -140.53868
+offset_top = 56.36121
+offset_right = -80.53868
+offset_bottom = 96.361206
+scale = Vector2(0.79778606, 0.34871596)
+theme_override_font_sizes/normal_font_size = 27
+text = "0"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Fall" type="AudioStreamPlayer2D" parent="." unique_id=2081936087]
+stream = ExtResource("17_xjtj3")
+volume_db = -4.16
+
+[node name="Swap" type="AudioStreamPlayer2D" parent="." unique_id=745404142]
+stream = ExtResource("18_u1g48")
+volume_db = -6.76
